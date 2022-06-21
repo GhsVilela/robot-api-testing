@@ -4,7 +4,7 @@ on:
     branches:
       - main
 jobs:
-  test-scala:
+  test-robot:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
@@ -14,6 +14,7 @@ jobs:
         python-version: '3.8'
         architecture: 'x64'
     - run: pip install robotframework
+    - run: pip install RESTinstance
     - run: pip install robotframework-jsonlibrary
     - name: Run robot tests
       run: robot --outputdir results atest
