@@ -1,4 +1,4 @@
-# Robot Basic API Testing
+# Robot API Testing
 
 Sample project that uses petstore api for basic knowledge of api testing using robot
 
