@@ -1,0 +1,26 @@
+name: test
+on:
+  push:
+    branches:
+      - main
+jobs:
+  test-scala:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.8'
+        architecture: 'x64'
+    - run: pip install robotframework
+    - run: pip install robotframework-jsonlibrary
+    - name: Run robot tests
+      run: robot --outputdir results atest
+    - name: Upload results
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+        name: results-report
+        path: results
+        retention-days: 7
