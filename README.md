@@ -1,5 +1,7 @@
 # Robot API Testing
 
+[![test](https://github.com/GhsVilela/robot-api-testing/actions/workflows/main.yml/badge.svg)](https://github.com/GhsVilela/robot-api-testing/actions/workflows/main.yml)
+
 Sample project that uses petstore api for basic knowledge of api testing using robot
 
 ## Install python
